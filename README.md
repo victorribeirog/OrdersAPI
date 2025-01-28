@@ -8,9 +8,7 @@ OrdersAPI é um microserviço desenvolvido para processar pedidos, gerar relató
 
 1. **Processamento de Pedidos**
    - Consome mensagens de uma fila RabbitMQ com informações de pedidos.
-
    ![OrderAPI](assets/img_3.png)
-
    - Persiste os dados em uma base MongoDB para consulta posterior.
 
      ![OrderAPI](assets/img_1.png)
@@ -37,6 +35,22 @@ OrdersAPI é um microserviço desenvolvido para processar pedidos, gerar relató
 - **Descrição**: Lista os pedidos realizados por um cliente, incluindo o valor total de todos os pedidos.
 ![OrderAPI](assets/img.png)
 
+---
+
+🔧 Testes
+
+Os testes foram implementados utilizando as seguintes abordagens e ferramentas:
+
+Padrão Triple A (Arrange/Act/Assert): Seguido para garantir clareza na estrutura dos testes.
+
+JUnit: Utilizado para criar cenários de teste e verificar os comportamentos esperados.
+
+Mockito: Usado para mockar interações e simular dependências externas.
+
+@Nested: Utilizado para organizar os testes em grupos lógicos, facilitando a leitura e manutenção do código.
+
+![OrderAPI](assets/img_4.png)
+
 
 ---
 
@@ -44,12 +58,13 @@ OrdersAPI é um microserviço desenvolvido para processar pedidos, gerar relató
 
 ```plaintext
 src/
-├── controller/     # Controladores para a API REST
-├── service/        # Lógica de negócios
-├── repository/     # Camada de acesso aos dados (MongoDB)
 ├── config/         # Configurações (RabbitMQ, MongoDB)
-├── model/          # Classes de modelo (Pedido, Cliente, etc.)
-├── dto/            # Objetos de Transferência de Dados (Request/Response)
+├── controller/     # Controladores para a API REST e DTOs de resposta
+├── dto/            # Objetos auxiliares
+├── entity/         # Entidades de domínio
+├── listener/       # Consumidores de mensagens do RabbitMQ
+├── repository/     # Camada de acesso aos dados (MongoDB)
+├── service/        # Lógica de negócios
 └── ...             # Outros diretórios auxiliares
 ```
 
