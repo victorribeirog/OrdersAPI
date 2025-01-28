@@ -7,10 +7,15 @@ OrdersAPI é um microserviço desenvolvido para processar pedidos, gerar relató
 ## ✨ Funcionalidades
 
 1. **Processamento de Pedidos**
-   - Consome mensagens de uma fila RabbitMQ com informações de pedidos.  
+   - Consome mensagens de uma fila RabbitMQ com informações de pedidos.
+
+   ![OrderAPI](assets/img_3.png)
+
    - Persiste os dados em uma base MongoDB para consulta posterior.
 
-2. **API REST**
+     ![OrderAPI](assets/img_1.png)
+
+1. **API REST**
    - Listagem de pedidos por cliente.
    - Consulta do valor total de todos os pedidos de um cliente.
 
