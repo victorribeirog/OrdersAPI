@@ -1,6 +1,6 @@
 # OrdersAPI
 
-OrdersAPI é um microserviço desenvolvido para processar pedidos, gerar relatórios e fornecer uma API REST para consultas relacionadas a pedidos e clientes. O projeto também implementa a funcionalidade adicional de calcular o valor total de todos os pedidos realizados por cliente.
+OrdersAPI é um microserviço desenvolvido para processar pedidos e fornecer uma API REST para consultas relacionadas ao pedidos do cliente. O projeto também implementa a funcionalidade adicional de calcular o valor total de todos os pedidos realizados por cliente.
 
 ---
 
